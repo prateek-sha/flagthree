@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/gsap.min.js"></script>
+    <link rel="stylesheet" href="./assest/main.css" />
+    <title>Prateek Sharma</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!-- google fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i"
+      rel="stylesheet"
+    />
+
+    <!-- terminal effect -->
+    <script src="./assest/js/t.min.js"></script>
+
+    <!-- for on scroll animations -->
+    <link rel="stylesheet" href="./assest/js/animate.css" />
+    <script src="./assest/js/wow.min.js"></script>
+  </head>
+  <body>
+    <!-- <div class="container-intro">
+      <div class="text-wrapper">
+        <div class="text-1 text">Minimalism</div>
+        <div class="text-2 text">Minimalism</div>
+        <div class="text-3 text">Minimalism</div>
+        <div class="text-4 text">Minimalism</div>
+        <div class="text-5 text">Minimalism</div>
+        <div class="text-6 text">Minimalism</div>
+        <div class="text-7 text">Minimalism</div>
+        <div class="text-8 text">Minimalism</div>
+        <div class="text-9 text">Minimalism</div>
+        <div class="text-10 text">Minimalism</div>
+        <div class="text-11 text">Minimalism</div>
+      </div>
+    </div> -->
+    <div class="wrapper">
+      <nav>
+        <span id="brand">
+          <a href="index.html">Prateek</a>
+        </span>
+        <ul id="menu">
+          <li>
+            <a href="index.html" class="hover-this"><span>home.</span></a>
+          </li>
+          <li>
+            <a href="work.html" class="hover-this"><span>work.</span></a>
+          </li>
+          <li>
+            <a href="about.html" class="hover-this"><span>about.</span></a>
+          </li>
+          <li>
+            <a href="contact.html" class="hover-this"><span>contact.</span></a>
+          </li>
+        </ul>
+        <div id="toggle">
+          <div class="span">menu</div>
+        </div>
+      </nav>
+      <div id="resize">
+        <div class="close-btn">close</div>
+        <ul id="menu">
+          <li>
+            <a href="index.html"><span></span>home.</a>
+          </li>
+          <li>
+            <a href="work.html"><span></span>work.</a>
+          </li>
+          <li>
+            <a href="about.html"><span></span>about.</a>
+          </li>
+          <li>
+            <a href="contact.html"><span></span>contact.</a>
+          </li>
+        </ul>
+      </div>
+      <div class="cursor"></div>
+
+      <!-------------------Hero sectiom-->
+      <div class="hero">
+        <div class="header">
+          <h1 class="line anim-typewriter">
+            I am a frontend devloper
+          </h1>
+        </div>
+      </div>
+      <section class="flag" id="flag"></section>
+    </div>
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <script type="text/javascript">
+    // navigation starts here
+
+    $("#toggle").click(function () {
+      $(this).toggleClass("on");
+      $("#resize").toggleClass("active");
+    });
+
+    $("#resize ul li a").click(function () {
+      $(this).toggleClass("on");
+      $("#resize").toggleClass("active");
+    });
+
+    $(".close-btn").click(function () {
+      $(this).toggleClass("on");
+      $("#resize").toggleClass("active");
+    });
+
+    // navigation ends here
+
+    // nav animation
+
+    TweenMax.from("#brand", 1, {
+      delay: 0.4,
+      y: 10,
+      opacity: 0,
+      ease: Expo.easeInOut,
+    });
+
+    TweenMax.staggerFrom(
+      "#menu li a",
+      1,
+      {
+        delay: 0.4,
+        opacity: 0,
+        ease: Expo.easeInOut,
+      },
+      0.1
+    );
+
+    // nav animation ends
+
+    new WOW().init();
+  </script>
+  <script src="./assest/js/nav.js"></script>
+  <script src="./assest/js/three.min.js"></script>
+  <script src="./assest/js/flag.js"></script>
+</html>
