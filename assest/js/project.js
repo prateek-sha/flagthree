@@ -30,7 +30,7 @@ var projectgeometry = new THREE.PlaneGeometry(5, 3, 50, 30);
 var projectmaterial = new THREE.MeshBasicMaterial({
   wireframe: false,
   color: 0xd8d0d1,
-  map: loader.load("one.jpg"),
+  map: loader.load("cluster.png"),
 });
 var projectmesh = new THREE.Mesh(projectgeometry, projectmaterial);
 projectscene.add(projectmesh);
@@ -62,9 +62,9 @@ function projectanimate() {
     const projectwaveX1 = 0.5 * Math.sin(v.x * 2 + t);
     //const waveX2 = 0.25 * Math.sin(v.x * 3 + t * 2);
     const projectcwaveY1 = 0.1 * Math.sin(v.y * 5 + t * 2);
-    v.z = projectcwaveY1 + projectwaveX1;
 
-    //const multi = (v.y - 2.5) / 5;
+    const multi = (v.x + 2.5) / 5;
+    v.z = (projectcwaveY1 + projectwaveX1) * multi;
   });
 
   projectmesh.geometry.verticesNeedUpdate = true;
