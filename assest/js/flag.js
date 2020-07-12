@@ -12,8 +12,10 @@ var camera = new THREE.PerspectiveCamera(
 const loader = new THREE.TextureLoader();
 
 var renderer = new THREE.WebGLRenderer({ alpha: false, antialias: true });
-renderer.setPixelRatio(720);
-renderer.setSize(section.clientWidth, section.clientHeight);
+renderer.setPixelRatio(window.devicePixelRatio);
+const width = (canvas.clientWidth * pixelRatio) | 0;
+const height = (canvas.clientHeight * pixelRatio) | 0;
+renderer.setSize(width, height, false);
 renderer.setClearColor(0x27750, 1);
 
 //adding canvas to html
