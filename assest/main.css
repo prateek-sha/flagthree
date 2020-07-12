@@ -851,3 +851,29 @@ textarea:focus {
 .next p {
   text-align: right;
 }
+
+.slider {
+  width: 100%;
+  position: relative;
+}
+
+.slick-slide:focus {
+  outline: none;
+}
+
+.slick-slide img {
+  width: 52%;
+}
+
+.slick-slide {
+  transition: all ease-in-out 1s;
+  opacity: 0.2;
+}
+
+.slick-active {
+  opacity: 0.2;
+}
+
+.slick-current {
+  opacity: 1;
+}
