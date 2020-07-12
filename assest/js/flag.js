@@ -10,13 +10,14 @@ var camera = new THREE.PerspectiveCamera(
 
 //Load for picture
 const loader = new THREE.TextureLoader();
-
+const pixelRatio = window.devicePixelRatio;
+console.log(pixelRatio);
 var renderer = new THREE.WebGLRenderer({ alpha: false, antialias: true });
-renderer.setPixelRatio(window.devicePixelRatio);
-const width = (canvas.clientWidth * pixelRatio) | 0;
-const height = (canvas.clientHeight * pixelRatio) | 0;
-renderer.setSize(width, height, false);
 renderer.setClearColor(0x27750, 1);
+renderer.setPixelRatio(window.devicePixelRatio);
+const width = section.clientWidth;
+const height = section.clientHeight;
+renderer.setSize(width, height);
 
 //adding canvas to html
 section.appendChild(renderer.domElement);
@@ -85,6 +86,6 @@ animate();
 //resize window
 window.addEventListener("resize", () => {
   camera.aspect = section.clientWidth / section.clientHeight;
-  camera.updateProjectionMatrix();
   renderer.setSize(section.clientWidth, section.clientHeight);
+  camera.updateProjectionMatrix();
 });
