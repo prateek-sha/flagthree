@@ -19,9 +19,8 @@ var projectrenderer = new THREE.WebGLRenderer({
 //projectrenderer.setClearColor(0x27750, 1);
 projectrenderer.setPixelRatio(window.devicePixelRatio);
 const projectwidth = project.clientWidth;
-console.log(projectwidth);
 const projectheight = project.clientHeight;
-projectrenderer.setSize(projectwidth / 2, projectheight);
+projectrenderer.setSize(projectwidth, projectheight);
 
 //adding canvas to html
 project.appendChild(projectrenderer.domElement);

@@ -12,8 +12,8 @@ var camera = new THREE.PerspectiveCamera(
 const loader = new THREE.TextureLoader();
 const pixelRatio = window.devicePixelRatio;
 console.log(pixelRatio);
-var renderer = new THREE.WebGLRenderer({ alpha: false, antialias: true });
-renderer.setClearColor(0x27750, 1);
+var renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+//renderer.setClearColor(0x27750, 1);
 renderer.setPixelRatio(window.devicePixelRatio);
 const width = section.clientWidth;
 const height = section.clientHeight;
@@ -25,7 +25,7 @@ section.appendChild(renderer.domElement);
 var geometry = new THREE.PlaneGeometry(19, 5, 70, 30);
 var material = new THREE.MeshBasicMaterial({
   wireframe: true,
-  color: 0xd8d0d1,
+  color: 0xffff88ae,
 });
 var flag = new THREE.Mesh(geometry, material);
 scene.add(flag);

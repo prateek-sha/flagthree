@@ -21,7 +21,7 @@ projectrenderer1.setPixelRatio(window.devicePixelRatio);
 const projectwidth1 = project1.clientWidth;
 console.log(projectwidth1);
 const projectheight1 = project1.clientHeight;
-projectrenderer1.setSize(projectwidth1 / 2, projectheight1);
+projectrenderer1.setSize(projectwidth1, projectheight1);
 
 //adding canvas to html
 project1.appendChild(projectrenderer1.domElement);
