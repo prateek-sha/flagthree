@@ -107,8 +107,17 @@ nav #brand a {
   color: #fff;
   transition: all 0.3s ease-out;
 }
+.footer a {
+  color: #fff;
+  transition: all 0.3s ease-out;
+}
 
 nav #brand a:hover {
+  text-decoration: none;
+}
+
+.footer  a:hover {
+    color: white;
   text-decoration: none;
 }
 
@@ -132,6 +141,11 @@ nav #menu li .logo {
   font-weight: 700;
 }
 nav #menu li span {
+  pointer-events: none;
+  transition: transform 0.1s linear;
+  display: inline-block;
+}
+.footer span {
   pointer-events: none;
   transition: transform 0.1s linear;
   display: inline-block;
@@ -284,6 +298,12 @@ nav #menu li a:hover {
     padding: 20px 0;
     display: inline-block;
   }
+}
+
+@media(max-width: 768px){
+    .cursor{
+        display: none;
+    }
 }
 
 /*-------------------------intro animation---------------------------*/
